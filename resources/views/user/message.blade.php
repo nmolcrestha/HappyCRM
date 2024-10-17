@@ -1,5 +1,6 @@
 <x-guest-layout>
-    <form action="" method="POST">
+    <form action="{{ route('message.submit', $user->id) }}" method="POST">
+        @csrf
         <div>
             <h1 class="text-xl text-center mb-4">Send to user message</h1>
         </div>

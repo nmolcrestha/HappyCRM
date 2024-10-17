@@ -1,5 +1,6 @@
 <x-guest-layout>
-    <form action="" method="POST">
+    <form action="{{ route('appointment.submit', $user->id) }}" method="POST">
+        @csrf
         <div>
             <h1 class="text-2xl font-bold mb-4">Make an Appointment</h1>
         </div>
