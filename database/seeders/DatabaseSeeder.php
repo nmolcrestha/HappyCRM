@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('password')
         ]);
 
+        User::factory(10)->create();
         User::all()->each(function (User $user) {
             $services = Service::factory(10)->create([
                 'user_id' => $user->id,
